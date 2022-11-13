@@ -297,12 +297,19 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
+const vowels = ["a", "e", "i", "o", "u"];
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string){
+  let count = 0;
+  for (const letter of string.toLowerCase()){
+    if (vowels.includes(letter)){
+      count++;
+    }
+  }
+  return count;
 }
 
-
+console.log(vowelCounter("Apples grow on apple trees, and there are twenty-two vowels in this sentence."));
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
